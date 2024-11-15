@@ -7,6 +7,7 @@ import { parseStringify } from "@/lib/utils";
 import { cookies } from "next/headers";
 // import { avatarPlaceholderUrl } from "@/constants";
 import { redirect } from "next/navigation";
+import { avatarPlaceholderUrl } from "@/constants";
 
 const getUserByEmail = async (email: string) => {
   const { databases } = await createAdminClient();
@@ -59,7 +60,7 @@ export const createAccount = async ({
       {
         fullName,
         email,
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrCLHZeA--7ckaEIUPD-Z0XASJ5BxYQYLsdA&s',
+        avatar: avatarPlaceholderUrl,
         accountId,
       },
     );
